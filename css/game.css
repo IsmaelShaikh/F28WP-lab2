@@ -1,3 +1,12 @@
+*{
+    font-family: 'Barlow', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+  }  
+
 #bear {
     position: absolute;
     left: 100px;
@@ -9,7 +18,7 @@
 #board {
     position: absolute;
     height: 70%;
-    width: 99%;
+    width: 100%;
     background-color: rgb(6, 136, 119);
     align-content: center;
     align-self: center;
@@ -28,9 +37,10 @@
     padding-left: 1%;
 }
 
-#buttons {
-    padding-left: 10px;
+.buttons {
+    padding-left: 1%;
     padding-bottom: 10px;
+    text-decoration: none;
 }
 
 #Reload{
