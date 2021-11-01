@@ -52,11 +52,11 @@ function start(){
     document.addEventListener("keydown",moveBear,false);
     // Add event listener to detect change in bear speed
     document.addEventListener("change", setSpeed);
+    // Add event listener to detect keydown event (in order to get start time)
     document.addEventListener("keydown",lastSting);
     // Create array of bees
     bees = new Array();
-    // Get start time
-    //lastStingTime=new Date();
+    // Call makeBees() and updateBees() methods to create bees, update positions, etc.
     makeBees();
     updateBees();
 }
