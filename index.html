@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>JavaScript and DOM API</title>
+    <link rel="stylesheet" type="text/css" href="css/game.css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>        
+        var bear;
+        var bees;
+        var updateTimer;
+        var lastStingTime;
+    </script>
+    <script src="game.js"></script>
+    <noscript>
+        Warning - JavaScript is disabled.
+        For full functionality of this page, it is necessary to enable JavaScript.
+    </noscript>
+
+    <body>
+
+        <div id="title">
+            <h1>Help the bear escape the bees!</h1>
+            <p>Bear tries to avoid being stung by <input type="text" id="nbBees" value="1" size="3"> bee(s) by running and jumping. The objective is to have the lowest number of stings as possible!</p>
+            <p>You can adjust the bear's speed <input type="text" id="speedBear" value="100" size="3"  onchange="setSpeed();"> px/ms. </p>
+            <p>You can adjust bees' speed <input type="text" id="speedBees" value="50" size="3"> px/ms
+                <br> and the refresh period <input type="text" id="periodTimer" value="10" size="3"> ms. </p>
+            <h2>Use arrow keys to move the bear.</h2>
+            <!-- Div for buttons -->
+            <div id="buttons">
+                <button id="StartGame" onclick="start();">Start</button>
+                <button id="AddBee" onclick="addBee();">Add Bee</button>
+                <button id="RestartGame" onclick="restart();">Restart</button> 
+                <button id="Reload" onclick="reload();">Reload Page</button>
+            </div>
+        </div>
+
+        <div id="scores">
+            <table>
+                <tr>
+                    <td>
+                        <p>Stings: [<span id="hits">0</span>]</p>
+                    </td>
+                    <td>
+                        <p>Longest Duration Without Being Stung: [<span id="duration">?</span>]</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="board">
+            <img src="./images/bear.gif" id="bear" alt="bear">
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,59 @@
+#bear {
+    position: absolute;
+    left: 100px;
+    /*top: 240px;*/
+    width: 100px;
+    height: 160px
+}
+
+#board {
+    position: absolute;
+    height: 70%;
+    width: 99%;
+    background-color: rgb(6, 136, 119);
+    align-content: center;
+    align-self: center;
+    display: inline-block;
+}
+
+#title {
+    background-color: rgb(104, 134, 127);
+    width: 100%;
+    align-content: center;
+    align-self: center;
+    display: inline-block;
+}
+
+#title h1, h2, p{
+    padding-left: 1%;
+}
+
+#buttons {
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+#Reload{
+    float:right;
+    margin-right: 20px;
+}
+
+#scores {
+    background-color: rgb(239, 176, 255);
+    align-content: center;
+    align-self: center;
+    padding-left: 1%;
+    font-weight: bold;
+}
+
+.location {
+    color: green;
+}
+
+#hits {
+    color: red;
+}
+
+#duration {
+    color: blue;
+}
