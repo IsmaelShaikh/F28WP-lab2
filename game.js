@@ -289,7 +289,7 @@ function updateBees() {
     let score = document.getElementById("hits").innerHTML; 
     // Get periodTimer from input field
     let period = document.getElementById("periodTimer").value;
-    // Check whether score meets condition of less than or equal to 1000 stings
+    // Check whether score meets condition of greater than or equal to 1000 stings
     if (score>=1000){
         // Stop timer
         clearTimeout(updateTimer);
