@@ -124,7 +124,7 @@ function moveBear(e) {
 
 // Function to set movement speed of bear in pixels
 function setSpeed(){
-    // Get speed of bear from html file
+    // Set speed of bear from html file
     bear.dBear = document.getElementById("speedBear").value;
     // If speed is not a number, return window alert to user
     if (isNaN(bear.dBear)) {
