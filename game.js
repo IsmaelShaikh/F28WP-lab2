@@ -76,11 +76,15 @@ function lastSting(){
 // Function to restart game
 function restart(){
     // Set hits to default value i.e., 0
-    hits.innerHTML = 0;
+    document.getElementById("hits").innerHTML = 0;
     // Set duration to default value i.e., "?"
-    duration.innerHTML="?";
+    document.getElementById("duration").innerHTML = "?";
+    // Stop timer
+    clearTimeout(updateTimer);
     // Remove bees from board
     removeBees();
+    // Start game with current settings
+    start();
 }
 
 // Function to reload game
@@ -275,6 +279,7 @@ function removeBees(){
 function moveBees() { 
     // Get speed of bee from html document
     let speed = document.getElementById("speedBees").value;
+    // Iterate upto bees array length
     for (let i = 0; i < bees.length; i++) { 
         let dx = getRandomInt(2 * speed) - speed; 
         let dy = getRandomInt(2 * speed) - speed; 
