@@ -45,6 +45,7 @@ function Bear() {
     };
 }
 
+// To start the game
 function start(){
     // Create bear
     bear = new Bear();
@@ -87,7 +88,7 @@ function reload(){
     window.location.reload();
 }
 
-// to move the bear, handles keyboard events
+// Function to move the bear based on keyboard events
 function moveBear(e) {
 
     //codes of the four keys
@@ -121,6 +122,7 @@ function moveBear(e) {
     } 
 }
 
+// Function to set movement speed of bear in pixels
 function setSpeed(){
     // Get speed of bear from html file
     bear.dBear = document.getElementById("speedBear").value;
@@ -131,7 +133,6 @@ function setSpeed(){
     }
 }
    
-
 class Bee{
     constructor(beeNumber) {
         //the HTML element corresponding to the IMG of the bee
@@ -259,8 +260,8 @@ function removeBees(){
     // As long as the number of bees is more than 0
     while (nbBees!=0){
         // Since the board consists of children elements such as the bear and the bees (images)
-        // We can obtain the bees
-        numBee = String('bee' + nbBees);
+        // We can obtain the bee ID's
+        numBee = ('bee' + nbBees);
         // Remove image through current bee ID 
         document.getElementById(numBee).remove();
         // Pop/remove bee from array
@@ -272,6 +273,7 @@ function removeBees(){
 
 // Function to move bees
 function moveBees() { 
+    // Get speed of bee from html document
     let speed = document.getElementById("speedBees").value;
     for (let i = 0; i < bees.length; i++) { 
         let dx = getRandomInt(2 * speed) - speed; 
@@ -316,9 +318,10 @@ function isHit(defender, offender) {
         let longestDuration = duration.innerHTML;
         // Since initial value is "?" i.e., NaN, add an OR condition in IF statement to check for not a number.
         if (longestDuration === 0 || isNaN(longestDuration)) {
+            // Assign longest duration
             longestDuration = thisDuration;
         } else {
-            // Update duration
+            // Update longest duration
             if (longestDuration < thisDuration) {
                 longestDuration = thisDuration;
             }
